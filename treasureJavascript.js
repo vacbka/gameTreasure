@@ -15,45 +15,74 @@ var getDistance = function (event, target) {
 
 var getDistanceHint = function (distance) {
 
-	if (distance < 10) {
-		return "Burn";
-	} else if (distance < 20) {
-		return "Very hot";
-	} else if (distance < 40) {
+	if (distance < 50) {
+		return "Boiling hot";
+	} else if (distance < 100) {
+		return "Really hot";
+	} else if (distance < 200) {
 		return "Hot";
-	} else if (distance < 80) {
+	} else if (distance < 300) {
 		return "Warm";
-	} else if (distance < 160) {
+	} else if (distance < 400) {
 		return "Cold";
-	} else if (distance < 320) {
-		return "Very cold";
+	} else if (distance < 500) {
+		return "Really cold";
+	} else if (distance < 600) {
+		return "Very very cold";
 	} else {
-		return "Freeze";	
+		return "Freezing";	
 	}
 }
 
 
-var width = 400;
-var height = 400;
-var clicks = 0;
+var width = 800;
+var height = 800;
+var target;
 
-var target = {
-	x: getRandomNumber(width),
-	y: getRandomNumber(height)
-};
+var clicks;
+var clicksLeft;
+
+var init = function () {
+
+	clicks = 0;
+	clicksLeft = 20;
+
+	target = {
+		x: getRandomNumber(width),
+		y: getRandomNumber(height)
+	};
+
+	$("#distance").text("Click on the map!");
+
+	$("#clicksLeft").text("Clicks left : " + clicksLeft);
+
+}
+
+init();
 
 
 $("#map").click(function (event) {
 
 	clicks++;
-	
+	clicksLeft--;
+
 	var distance = getDistance(event,target);
 
 	var distanceHint = getDistanceHint(distance);
-
+	
 	$("#distance").text(distanceHint);
+	
+	$("#clicksLeft").text("Clicks left : " + clicksLeft);
 
-	if (distance < 8) {
+	if (distance < 25) {
 		alert("Treasure found! Clicks made: " + clicks);
+
+		init();
+	}
+
+	if (clicksLeft === 0) {
+		alert("Treasure not found in " + clicks + " clicks.");
+		
+		init();
 	}
 });
