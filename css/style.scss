@@ -1,0 +1,120 @@
+@import 'normalize.scss';
+
+$color-first: teal;
+$color-second: dimgray;
+
+.section-inner {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.section-header {
+    position: relative;
+    padding: 15px;
+    font-size: 20px;
+
+    .section-inner {
+        display: flex;
+
+        .bio {
+            .name {
+                font-size: 62px;
+                font-weight: bold;
+            }
+
+            .purpose {
+                margin-bottom: 20px;
+                font-size: 20px;
+                color: $color-second;
+            }
+
+            .phone {
+                font-weight: bold;
+            }
+
+            & + .photo {
+                margin-left: 70px;
+            }
+
+            .contacts {
+                padding-bottom: 10px;
+
+                &-item {
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+.section-main {
+    position: relative;
+    font-size: 20px;
+
+    .skills-languages-hobbies {
+        &_title {
+            margin-bottom: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            color: $color-first;
+        }
+
+        .skills-languages-hobbies-item {
+            margin-bottom: 20px;
+        }
+    }
+
+    .section-inner {
+        display: flex;
+
+        .experience-education {
+            &_title {
+                margin-bottom: 20px;
+                font-size: 30px;
+                font-weight: bold;
+                color: $color-first;
+            }
+
+            .experience {
+                .company {
+                    margin-bottom: 5px;
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+
+                .position {
+                    padding: 5px 10px;
+                    margin-bottom: 5px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $color-second;
+
+                    &-range {
+                        padding-left: 15px;
+                        margin-bottom: 5px;
+                        font-size: 18px;
+                        color: $color-second;
+                    }
+                }
+
+                margin-bottom: 20px;
+            }
+
+            .education {
+                &_subtitle {
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                &_description {
+                    padding-left: 10px;
+                }
+            }
+
+            & + .skills-languages-hobbies {
+                margin-left: 40px;
+            }
+        }
+    }
+}
