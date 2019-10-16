@@ -3,20 +3,28 @@
 $color-first: teal;
 $color-second: dimgray;
 
+.section-outer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .section-inner {
-    width: 800px;
+    width: auto;
     margin: 0 auto;
 }
 
 .section-header {
     position: relative;
-    padding: 15px;
+    padding: 10px;
     font-size: 20px;
 
     .section-inner {
         display: flex;
+        flex-wrap: wrap;
 
         .bio {
+            margin-right: 70px;
+
             .name {
                 font-size: 62px;
                 font-weight: bold;
@@ -32,10 +40,6 @@ $color-second: dimgray;
                 font-weight: bold;
             }
 
-            & + .photo {
-                margin-left: 70px;
-            }
-
             .contacts {
                 padding-bottom: 10px;
 
@@ -49,6 +53,7 @@ $color-second: dimgray;
 
 .section-main {
     position: relative;
+    padding: 10px;
     font-size: 20px;
 
     .skills-languages-hobbies {
@@ -60,16 +65,19 @@ $color-second: dimgray;
         }
 
         .skills-languages-hobbies-item {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
     }
 
     .section-inner {
         display: flex;
+        flex-wrap: wrap;
 
         .experience-education {
+            margin-right: 40px;
+
             &_title {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
                 font-size: 30px;
                 font-weight: bold;
                 color: $color-first;
@@ -97,7 +105,7 @@ $color-second: dimgray;
                     }
                 }
 
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
 
             .education {
@@ -111,10 +119,10 @@ $color-second: dimgray;
                     padding-left: 10px;
                 }
             }
-
-            & + .skills-languages-hobbies {
-                margin-left: 40px;
-            }
         }
     }
+}
+
+.section-footer {
+    padding-left: 10px;
 }

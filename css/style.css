@@ -303,34 +303,40 @@ template {
 [hidden] {
   display: none; }
 
+.section-outer {
+  max-width: 800px;
+  margin: 0 auto; }
+
 .section-inner {
-  width: 800px;
+  width: auto;
   margin: 0 auto; }
 
 .section-header {
   position: relative;
-  padding: 15px;
+  padding: 10px;
   font-size: 20px; }
   .section-header .section-inner {
-    display: flex; }
-    .section-header .section-inner .bio .name {
-      font-size: 62px;
-      font-weight: bold; }
-    .section-header .section-inner .bio .purpose {
-      margin-bottom: 20px;
-      font-size: 20px;
-      color: dimgray; }
-    .section-header .section-inner .bio .phone {
-      font-weight: bold; }
-    .section-header .section-inner .bio + .photo {
-      margin-left: 70px; }
-    .section-header .section-inner .bio .contacts {
-      padding-bottom: 10px; }
-      .section-header .section-inner .bio .contacts-item {
-        padding-bottom: 5px; }
+    display: flex;
+    flex-wrap: wrap; }
+    .section-header .section-inner .bio {
+      margin-right: 70px; }
+      .section-header .section-inner .bio .name {
+        font-size: 62px;
+        font-weight: bold; }
+      .section-header .section-inner .bio .purpose {
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: dimgray; }
+      .section-header .section-inner .bio .phone {
+        font-weight: bold; }
+      .section-header .section-inner .bio .contacts {
+        padding-bottom: 10px; }
+        .section-header .section-inner .bio .contacts-item {
+          padding-bottom: 5px; }
 
 .section-main {
   position: relative;
+  padding: 10px;
   font-size: 20px; }
   .section-main .skills-languages-hobbies_title {
     margin-bottom: 20px;
@@ -338,36 +344,40 @@ template {
     font-weight: bold;
     color: teal; }
   .section-main .skills-languages-hobbies .skills-languages-hobbies-item {
-    margin-bottom: 20px; }
+    margin-bottom: 15px; }
   .section-main .section-inner {
-    display: flex; }
-    .section-main .section-inner .experience-education_title {
-      margin-bottom: 20px;
-      font-size: 30px;
-      font-weight: bold;
-      color: teal; }
-    .section-main .section-inner .experience-education .experience {
-      margin-bottom: 20px; }
-      .section-main .section-inner .experience-education .experience .company {
-        margin-bottom: 5px;
-        font-size: 24px;
-        font-weight: bold; }
-      .section-main .section-inner .experience-education .experience .position {
-        padding: 5px 10px;
-        margin-bottom: 5px;
-        font-size: 20px;
+    display: flex;
+    flex-wrap: wrap; }
+    .section-main .section-inner .experience-education {
+      margin-right: 40px; }
+      .section-main .section-inner .experience-education_title {
+        margin-bottom: 15px;
+        font-size: 30px;
         font-weight: bold;
-        color: dimgray; }
-        .section-main .section-inner .experience-education .experience .position-range {
-          padding-left: 15px;
+        color: teal; }
+      .section-main .section-inner .experience-education .experience {
+        margin-bottom: 15px; }
+        .section-main .section-inner .experience-education .experience .company {
           margin-bottom: 5px;
-          font-size: 18px;
+          font-size: 24px;
+          font-weight: bold; }
+        .section-main .section-inner .experience-education .experience .position {
+          padding: 5px 10px;
+          margin-bottom: 5px;
+          font-size: 20px;
+          font-weight: bold;
           color: dimgray; }
-    .section-main .section-inner .experience-education .education_subtitle {
-      margin-bottom: 10px;
-      font-size: 20px;
-      font-weight: bold; }
-    .section-main .section-inner .experience-education .education_description {
-      padding-left: 10px; }
-    .section-main .section-inner .experience-education + .skills-languages-hobbies {
-      margin-left: 40px; }
+          .section-main .section-inner .experience-education .experience .position-range {
+            padding-left: 15px;
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: dimgray; }
+      .section-main .section-inner .experience-education .education_subtitle {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold; }
+      .section-main .section-inner .experience-education .education_description {
+        padding-left: 10px; }
+
+.section-footer {
+  padding-left: 10px; }
